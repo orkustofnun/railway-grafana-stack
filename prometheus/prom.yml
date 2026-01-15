@@ -9,7 +9,7 @@ scrape_configs:
   - job_name: 'uos-identity-service'
     scheme: http
     static_configs:
-      - targets: ['uos-identity-service.railway.internal:8001']
+      - targets: ['https://uos-identity-service-development.up.railway.app/metrics']
     metrics_path: '/metrics'
 
   # - job_name: 'example_api'
