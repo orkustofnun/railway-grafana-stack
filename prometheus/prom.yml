@@ -8,7 +8,7 @@ scrape_configs:
   # Your FastAPI service
   - job_name: 'uos-api-gateway'
     static_configs:
-      - targets: ['https://uos-api-gateway-development.up.railway.app:8000']
+      - targets: ['uos-api-gateway.railway.internal:8000']
     metrics_path: '/metrics'
 
   # - job_name: 'example_api'
