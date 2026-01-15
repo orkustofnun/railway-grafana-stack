@@ -5,10 +5,14 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9090']
   
-  # Your FastAPI service
   - job_name: 'uos-api-gateway'
     static_configs:
-      - targets: ['uos-api-gateway.railway.internal:8000', 'uos-identity-service.railway.internal:8001']
+      - targets: ['uos-api-gateway.railway.internal:8000']
+    metrics_path: '/metrics'
+
+    - job_name: 'uos-identity-service'
+    static_configs:
+      - targets: ['uos-identity-service.railway.internal:8001']
     metrics_path: '/metrics'
 
   # - job_name: 'example_api'
