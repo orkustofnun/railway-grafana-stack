@@ -7,7 +7,6 @@ scrape_configs:
   
   # Your FastAPI service
   - job_name: 'uos-identity-service'
-    scheme: http
     static_configs:
       - targets: ['uos-identity-service.railway.internal:8001']
     metrics_path: '/metrics'
