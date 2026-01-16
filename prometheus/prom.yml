@@ -15,6 +15,11 @@ scrape_configs:
       - targets: ['uos-identity-service.railway.internal:8001']
     metrics_path: '/metrics'
 
+  - job_name: 'uos-linux-api'
+    static_configs:
+      - targets: ['pushgateway.railway.internal:9090']
+    metrics_path: '/metrics'
+
   # - job_name: 'example_api'
   #   scheme: http
   #   static_configs:
