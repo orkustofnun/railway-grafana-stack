@@ -7,5 +7,3 @@ COPY loki.yml /etc/loki/loki-confi.yaml
 
 # Command to run Loki
 CMD ["-config.file=/etc/loki/loki-confi.yaml"]
-
-# CMD ["loki", "-config.file=/etc/loki/loki-confi.yaml", "-auth.token=${LOKI_API_TOKEN}"]
